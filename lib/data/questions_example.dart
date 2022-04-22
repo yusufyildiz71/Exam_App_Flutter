@@ -2,7 +2,7 @@ import 'package:quizz_app/model/question_model.dart';
 
 List<QuestionModel> questions = [
   QuestionModel(
-    "Yusuf kaç yaşıdadır ?",
+    "Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır Yusuf kaç yaşıdadır ?",
     {
       "22": false,
       "23": false,
@@ -62,7 +62,7 @@ List<QuestionModel> questions = [
         "9": false,
       }),
   QuestionModel(
-      "Herkesi güldüren palyonço aslında kimdir? ?", {
+      "Herkesi güldüren palyonço aslında kimdir ?", {
     "Doktor": false,
     "Kendisi": true,
     "Mahalle muhtarı": false,

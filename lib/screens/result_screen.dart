@@ -62,7 +62,7 @@ class _ResultScreenState extends State<ResultScreen> {
                   ));
             },
             shape: StadiumBorder(),
-            color: AppColor.secondaryColor,
+            color: Colors.orange,
             padding: EdgeInsets.all(18.0),
             child: Text(
               "SINAVI TEKRARLA",

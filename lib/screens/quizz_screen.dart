@@ -62,22 +62,26 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     ),
                   ),
                   const Divider(
-                    color: Colors.white,
+                    color: Colors.orange,
                   ),
                   const SizedBox(
                     height: 10.0,
                   ),
+                  
                   SizedBox(
                     width: double.infinity,
                     height: 200.0,
-                    child: Text(
-                      "${questions[index].question}",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 22.0,
+                    child: SingleChildScrollView(
+                      child: Text(
+                        "${questions[index].question}",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22.0,
+                        ),
                       ),
                     ),
                   ),
+                  Text(" "),
                   for (int i = 0; i < questions[index].answers!.length; i++)
                     Container(
                       width: double.infinity,
@@ -143,7 +147,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     elevation: 0.0,
                     child: Text(
                       btnText,
-                      style: TextStyle(color: Colors.white,fontSize: 18),
+                      style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
                     ),
                   )
                 ],

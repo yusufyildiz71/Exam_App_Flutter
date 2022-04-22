@@ -50,7 +50,7 @@ class _MainMenuState extends State<MainMenu> {
                         ));
                   },
                   shape: const StadiumBorder(),
-                  fillColor: Colors.purple,
+                  fillColor: Colors.orange,
                   child: const Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:quizz_app/data/questions_example.dart';
 import 'package:quizz_app/screens/result_screen.dart';
 import 'package:quizz_app/ui/shared/color.dart';
-import 'package:quizz_app/widgets/quizz_widget.dart';
-import 'package:quizz_app/model/question_model.dart';
 
 class QuizzScreen extends StatefulWidget {
   const QuizzScreen({Key? key}) : super(key: key);
@@ -13,6 +11,7 @@ class QuizzScreen extends StatefulWidget {
 }
 
 class _QuizzScreenState extends State<QuizzScreen> {
+  // ignore: non_constant_identifier_names
   int question_pos = 0;
   int score = 0;
   bool btnPressed = false;
@@ -74,19 +73,19 @@ class _QuizzScreenState extends State<QuizzScreen> {
                     child: SingleChildScrollView(
                       child: Text(
                         "${questions[index].question}",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 22.0,
                         ),
                       ),
                     ),
                   ),
-                  Text(" "),
+                  const Text(" "),
                   for (int i = 0; i < questions[index].answers!.length; i++)
                     Container(
                       width: double.infinity,
                       height: 50.0,
-                      margin: EdgeInsets.only(
+                      margin: const EdgeInsets.only(
                           bottom: 20.0, left: 12.0, right: 12.0),
                       child: RawMaterialButton(
                         shape: RoundedRectangleBorder(
@@ -104,8 +103,10 @@ class _QuizzScreenState extends State<QuizzScreen> {
                                     .values
                                     .toList()[i]) {
                                   score++;
+                                  // ignore: avoid_print
                                   print("yes");
                                 } else {
+                                  // ignore: avoid_print
                                   print("no");
                                 }
                                 setState(() {
@@ -141,13 +142,13 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         });
                       }
                     },
-                    shape: StadiumBorder(),
+                    shape: const StadiumBorder(),
                     fillColor: Colors.orange,
-                    padding: EdgeInsets.all(18.0),
+                    padding: const EdgeInsets.all(18.0),
                     elevation: 0.0,
                     child: Text(
                       btnText,
-                      style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
                     ),
                   )
                 ],

@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quizz_app/screens/main_menu.dart';
 import 'package:quizz_app/ui/shared/color.dart';
 
+// ignore: must_be_immutable
 class ResultScreen extends StatefulWidget {
   int score;
   ResultScreen(this.score, {Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _ResultScreenState extends State<ResultScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             child: Text(
               "Sınavınız Bitmiştir..",
@@ -32,25 +32,25 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 45.0,
           ),
-          Text(
+          const Text(
             "PUANINIZ",
             style: TextStyle(color: Colors.white, fontSize: 34.0),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
           Text(
-            "${widget.score}"+"/10",
-            style: TextStyle(
+            "${widget.score}""/10",
+            style: const TextStyle(
               color: Colors.orange,
               fontSize: 85.0,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 100.0,
           ),
           FlatButton(
@@ -58,13 +58,13 @@ class _ResultScreenState extends State<ResultScreen> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MainMenu(),
+                    builder: (context) => const MainMenu(),
                   ));
             },
-            shape: StadiumBorder(),
+            shape:const StadiumBorder(),
             color: Colors.orange,
-            padding: EdgeInsets.all(18.0),
-            child: Text(
+            padding: const EdgeInsets.all(18.0),
+            child: const Text(
               "SINAVI TEKRARLA",
               style: TextStyle(color: Colors.white),
             ),

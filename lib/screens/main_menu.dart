@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:quizz_app/screens/quizz_screen.dart';
 import 'package:quizz_app/ui/shared/color.dart';
@@ -42,11 +42,11 @@ class _MainMenuState extends State<MainMenu> {
               child: Center(
                 child: RawMaterialButton(
                   onPressed: () {
-                    //Navigating the the Quizz Screen
+                  
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => QuizzScreen(),
+                          builder: (context) => const QuizzScreen(),
                         ));
                   },
                   shape: const StadiumBorder(),

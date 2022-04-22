@@ -20,6 +20,7 @@ class _ResultScreenState extends State<ResultScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          
           const SizedBox(
             width: double.infinity,
             child: Text(

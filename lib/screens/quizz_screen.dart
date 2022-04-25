@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:flexi_timer/flexi_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:quizz_app/data/questions_example.dart';
 import 'package:quizz_app/screens/result_screen.dart';
 import 'package:quizz_app/ui/shared/color.dart';
+
 
 class QuizzScreen extends StatefulWidget {
   const QuizzScreen({Key? key}) : super(key: key);
@@ -26,14 +28,40 @@ class _QuizzScreenState extends State<QuizzScreen> {
     super.initState();
     _controller = PageController(initialPage: 0);
   }
-
+ FlexiTimerController _timerController = FlexiTimerController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       
       backgroundColor: AppColor.pripmaryColor,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        leading: FlexiTimer(
+              controller: _timerController,
+              duration: const Duration(seconds: 10),
+              timerFormat: TimerTextFormat.Hms,
+              onComplete: () {
+                 Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ResultScreen(score),
+                        ));
+              },
+              textStyle: const TextStyle(
+                color: Colors.blue,
+                fontSize: 60,
+              ),
+              isDiplayIcon: true,
+              iconPosition: IconPosition.prefix,
+              icon: const Icon(
+                Icons.timer,
+              ),
+            ),
+        ),
       
       body: Padding(
+
           padding: const EdgeInsets.all(18.0),
           child: PageView.builder(
             controller: _controller!,

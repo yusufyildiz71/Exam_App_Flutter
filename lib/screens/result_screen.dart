@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:quizz_app/screens/main_menu.dart';
 import 'package:quizz_app/ui/shared/color.dart';

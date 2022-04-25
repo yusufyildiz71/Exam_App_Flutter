@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:quizz_app/screens/quizz_screen.dart';
-import 'package:quizz_app/ui/shared/color.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
+      backgroundColor: Color(0xFF252c4a),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 48.0,

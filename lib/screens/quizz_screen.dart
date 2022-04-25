@@ -4,7 +4,6 @@ import 'package:flexi_timer/flexi_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:quizz_app/data/questions_example.dart';
 import 'package:quizz_app/screens/result_screen.dart';
-import 'package:quizz_app/ui/shared/color.dart';
 
 
 class QuizzScreen extends StatefulWidget {
@@ -34,7 +33,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       
-      backgroundColor: AppColor.pripmaryColor,
+      backgroundColor: Color(0xFF252c4a),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,

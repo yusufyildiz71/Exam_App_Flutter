@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quizz_app/model/question_model.dart';
-import 'package:quizz_app/ui/shared/color.dart';
 
 Widget questionWidget(
     QuestionModel questionModel, void Function() function, bool presed) {
@@ -26,7 +25,7 @@ Widget questionWidget(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
-            fillColor: AppColor.secondaryColor,
+          
             onPressed: function,
             child: Text(questionModel.answers!.keys.toList()[i]),
           ),

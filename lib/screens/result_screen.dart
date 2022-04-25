@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:quizz_app/screens/main_menu.dart';
-import 'package:quizz_app/ui/shared/color.dart';
 
 // ignore: must_be_immutable
 class ResultScreen extends StatefulWidget {
@@ -17,7 +16,7 @@ class _ResultScreenState extends State<ResultScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.pripmaryColor,
+      backgroundColor: Color(0xFF252c4a),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

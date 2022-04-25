@@ -21,6 +21,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
   bool btnPressed = false;
   PageController? _controller;
   String btnText = "Sonraki Soru";
+  String btnText2 = "Önceki Soru";
   bool answered = false;
   @override
   void initState() {
@@ -37,9 +38,12 @@ class _QuizzScreenState extends State<QuizzScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        leading: FlexiTimer(
+        actions: [
+          
+          FlexiTimer(
+          
               controller: _timerController,
-              duration: const Duration(seconds: 10),
+              duration: const Duration(seconds: 30),
               timerFormat: TimerTextFormat.Hms,
               onComplete: () {
                  Navigator.push(
@@ -49,15 +53,17 @@ class _QuizzScreenState extends State<QuizzScreen> {
                         ));
               },
               textStyle: const TextStyle(
-                color: Colors.blue,
-                fontSize: 60,
+                color: Colors.orange,
+                fontSize: 20,
               ),
               isDiplayIcon: true,
-              iconPosition: IconPosition.prefix,
+              iconPosition: IconPosition.suffix,
               icon: const Icon(
-                Icons.timer,
+                Icons.timer_rounded,
+                color: Colors.green,
               ),
-            ),
+            ),],
+        
         ),
       
       body: Padding(
@@ -182,6 +188,32 @@ class _QuizzScreenState extends State<QuizzScreen> {
                       elevation: 0.0,
                       child: Text(
                         btnText,
+                        style: const TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20.0,
+                    ),
+                    RawMaterialButton(
+                      onPressed: () {
+                        if(_controller!.page?.toInt()==questions[0]){
+                          setState(() {
+                            btnPressed=false;
+                          });
+                        }
+                        else{
+                          _controller?.previousPage(
+                            duration: const Duration(milliseconds: 250),
+                            curve: Curves.easeInExpo);
+                        }
+                       
+                      },
+                      shape: const StadiumBorder(),
+                      fillColor: Colors.orange,
+                      padding: const EdgeInsets.all(18.0),
+                      elevation: 0.0,
+                      child: Text(
+                        btnText2,
                         style: const TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
                       ),
                     )
